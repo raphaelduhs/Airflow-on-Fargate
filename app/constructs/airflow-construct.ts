@@ -8,7 +8,6 @@ import { FargateTaskDefinition } from '@aws-cdk/aws-ecs';
 
 import {airflowTaskConfig, ContainerConfig} from "../config";
 import { ServiceConstruct } from "./service-construct";
-import { v4 as uuidv4 } from 'uuid';
 
 
 export interface AirflowConstructProps {
@@ -25,7 +24,7 @@ export class AirflowConstruct extends Construct {
   constructor(parent: Construct, name: string, props: AirflowConstructProps) {
     super(parent, name);
 
-    const adminPassword = uuidv4();
+    const adminPassword = "bfcbd3a3-d88a-4113-9f53-0fef95ba7515";
 
     const ENV_VAR = {
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: props.dbConnection,

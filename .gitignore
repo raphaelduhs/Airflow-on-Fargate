@@ -1,0 +1,4 @@
+node_modules
+cdk.out
+.vscode
+AWSCLIV2.pkg
